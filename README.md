@@ -58,16 +58,20 @@ config.hotwire_livereload.listen_paths << Rails.root.join("app/assets/builds")
 ```
 You do not need any extension or add-on for firefox chrome safari.
 
-Autosorting classes in vim using prettier is performed using Coc
-https://github.com/iamcco/coc-tailwindcss
-```
-:CocInstall coc-tailwindcss
-```
-
 Run the app using
 ```
 bin/dev
 ```
+
+Open browser on <http://localhost:3000/> and edit to add red and blue text color
+`md:text-blue-500 text-red-500` to `app/views/pages/index.html.erb`
+
+Please use this class order to see how autosorting using prettier works. In vim
+it can be installed using Coc https://github.com/iamcco/coc-tailwindcss
+```
+:CocInstall coc-tailwindcss
+```
+When you save the file, class should be `text-red-500 md:text-blue-500`
 
 For the error
 ```
